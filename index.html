@@ -114,23 +114,39 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
+
+
 <body>
   <!-- Навігация -->
+<!-- Навігация -->
 <nav class="navbar">
-  
   <div class="container">
+
+    <!-- Лого -->
     <a href="#" class="logo-link" onclick="location.reload()">
       <img src="logo.png" alt="Лого" class="logo-img">
     </a>
-    <a href="#hero"><i class="fa-solid fa-house"></i> Головна</a>
-    <a href="#about"><i class="fa-solid fa-circle-info"></i> Про нас</a>
-    <a href="#benefits"><i class="fa-solid fa-trophy"></i> Наші переваги</a>
-    <a href="#how"><i class="fa-solid fa-gear"></i> Як ми працюємо?</a>
-    <a href="#services"><i class="fa-solid fa-briefcase"></i> Наші послуги</a>
-    <a href="#categories"><i class="fa-solid fa-list"></i> Категорії</a>
-    <a href="#license"><i class="fa-solid fa-circle-question"></i> Ліцензія</a>
-    <a href="#reviews"><i class="fa-solid fa-star"></i> Відгуки</a>
-    <a href="#contact"><i class="fa-solid fa-envelope"></i> Контакти</a>
+
+    <!-- Бургер-кнопка -->
+    <div class="burger" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Нав-меню -->
+    <div class="nav-menu" id="navMenu">
+      <a href="#hero"><i class="fa-solid fa-house"></i> Головна</a>
+      <a href="#about"><i class="fa-solid fa-circle-info"></i> Про нас</a>
+      <a href="#benefits"><i class="fa-solid fa-trophy"></i> Наші переваги</a>
+      <a href="#how"><i class="fa-solid fa-gear"></i> Як ми працюємо?</a>
+      <a href="#services"><i class="fa-solid fa-briefcase"></i> Наші послуги</a>
+      <a href="#categories"><i class="fa-solid fa-list"></i> Категорії</a>
+      <a href="#license"><i class="fa-solid fa-circle-question"></i> Ліцензія</a>
+      <a href="#reviews"><i class="fa-solid fa-star"></i> Відгуки</a>
+      <a href="#contact"><i class="fa-solid fa-envelope"></i> Контакти</a>
+    </div>
+
   </div>
 </nav>
 
@@ -458,6 +474,11 @@
   });
   // Перезагрузим AOS после загрузки всех картинок, чтобы позиции правильные
   window.addEventListener('load', AOS.refresh);
+</script>
+<script>
+  function toggleMenu() {
+    document.getElementById('navMenu').classList.toggle('active');
+  }
 </script>
 
 </body>

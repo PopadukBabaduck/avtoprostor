@@ -1002,3 +1002,47 @@ footer {
     transform: translateY(-8.5px) rotate(-45deg);
   }
 }
+/* Burger Styles */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+}
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: white;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+}
