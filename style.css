@@ -1188,15 +1188,45 @@ footer {
   display: none;
 }
 
+.telegram-float-mobile {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0088cc;
+  color: #fff;
+  font-size: 28px;
+  padding: 18px;
+  border-radius: 50%;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
 .telegram-float-mobile:hover {
-  background: #0071aa;
-  transform: scale(1.1);
+  background: #006699;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 136, 204, 0.7);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 15px rgba(0, 136, 204, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(0, 136, 204, 0);
+  }
 }
 
 @media (max-width: 768px) {
   .telegram-float-mobile {
     display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
