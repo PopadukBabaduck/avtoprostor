@@ -236,6 +236,9 @@
       <a href="#license"><i class="fa-solid fa-circle-question"></i> Ліцензія</a>
       <a href="#reviews"><i class="fa-solid fa-star"></i> Відгуки</a>
       <a href="#contact"><i class="fa-solid fa-envelope"></i> Контакти</a>
+      <a href="https://t.me/vasia_mreo" class="btn-telegram-top" target="_blank">
+  <i class="fa-brands fa-telegram"></i> Telegram
+</a>
     </div>
   </div>
 </nav>
@@ -357,7 +360,7 @@
         <h3>Первинне отримання</h3>
         <p>Перше посвідчення на 2 роки.</p>
         <div class="card-buttons">
-          <a href="#" class="btn outline">Дізнатись</a>
+          <a href="https://t.me/vasia_mreo" class="btn outline" target="_blank">Дізнатись</a>
           <a href="#contact" class="btn green">Замовити</a>
         </div>
       </div>
@@ -366,7 +369,7 @@
         <h3>Відновлення за 130-ї статті</h3>
         <p>Повне зняття обмежень.</p>
         <div class="card-buttons">
-          <a href="#" class="btn outline">Дізнатись</a>
+          <a href="https://t.me/vasia_mreo" class="btn outline" target="_blank">Дізнатись</a>
           <a href="#contact" class="btn green">Замовити</a>
         </div>
       </div>
@@ -375,7 +378,7 @@
         <h3>Заміна на 30 років</h3>
         <p>Перше посвідчення на постійне.</p>
         <div class="card-buttons">
-          <a href="#" class="btn outline">Дізнатись</a>
+          <a href="https://t.me/vasia_mreo" class="btn outline" target="_blank">Дізнатись</a>
           <a href="#contact" class="btn green">Замовити</a>
         </div>
       </div>
@@ -384,7 +387,7 @@
         <h3>Заміна посвідчення</h3>
         <p>Заміна за строком або втратою.</p>
         <div class="card-buttons">
-          <a href="#" class="btn outline">Дізнатись</a>
+         <a href="https://t.me/vasia_mreo" class="btn outline" target="_blank">Дізнатись</a>
           <a href="#contact" class="btn green">Замовити</a>
         </div>
       </div>
@@ -393,7 +396,7 @@
         <h3>Скасування обмежень</h3>
         <p>Після позбавлення до закінчення терміну.</p>
         <div class="card-buttons">
-          <a href="#" class="btn outline">Дізнатись</a>
+          <a href="https://t.me/vasia_mreo" class="btn outline" target="_blank">Дізнатись</a>
           <a href="#contact" class="btn green">Замовити</a>
         </div>
       </div>
@@ -566,9 +569,21 @@
 </script>
 <script>
   function toggleMenu() {
-    document.getElementById('navMenu').classList.toggle('active');
+    const nav = document.getElementById('navMenu');
+    nav.classList.toggle('active');
   }
+
+  // Закривати меню після кліку на пункт
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll('#navMenu a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        document.getElementById('navMenu').classList.remove('active');
+      });
+    });
+  });
 </script>
+
 
 </body>
 </html>
