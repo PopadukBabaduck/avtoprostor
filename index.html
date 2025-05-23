@@ -560,6 +560,16 @@ fbq('track', 'PageView');
        <a href="https://t.me/vasia_mreo" target="_blank" class="telegram-float-mobile" aria-label="Написати в Telegram">
        <i class="fa-brands fa-telegram"></i>
        </a>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var tgBtn = document.querySelector('.btn-telegram-top');
+    if (tgBtn) {
+      tgBtn.addEventListener('click', function () {
+        fbq('trackCustom', 'TelegramClick');
+      });
+    }
+  });
+</script>
 
 
 </body>
