@@ -207,7 +207,7 @@ fbq('track', 'PageView');
       <a href="#license"><i class="fa-solid fa-circle-question"></i> Ліцензія</a>
       <a href="#reviews"><i class="fa-solid fa-star"></i> Відгуки</a>
       <a href="#contact"><i class="fa-solid fa-envelope"></i> Контакти</a>
-      <a href="https://t.me/vasia_mreo" class="btn-telegram-top" target="_blank">
+
   <i class="fa-brands fa-telegram"></i> Telegram
 </a>
     </div>
@@ -557,19 +557,19 @@ fbq('track', 'PageView');
     });
   });
 </script>
-       <a href="https://t.me/vasia_mreo" target="_blank" class="telegram-float-mobile" aria-label="Написати в Telegram">
-       <i class="fa-brands fa-telegram"></i>
-       </a>
+<a href="https://t.me/vasia_mreo" 
+   target="_blank" 
+   class="telegram-float-mobile" 
+   id="telegram-button"
+   aria-label="Написати в Telegram">
+   <i class="fa-brands fa-telegram"></i>
+</a>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var tgBtn = document.querySelector('.btn-telegram-top');
-    if (tgBtn) {
-      tgBtn.addEventListener('click', function () {
-        fbq('trackCustom', 'TelegramClick');
-      });
-    }
+  document.getElementById('telegram-button').addEventListener('click', function() {
+    fbq('track', 'Lead');
   });
 </script>
+
 
 
 </body>
